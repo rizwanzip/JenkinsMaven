@@ -10,4 +10,10 @@ class JenkinsmavenApplicationTests {
 	void contextLoads() {
 	}
 
+	 @Test
+  public void intentionalyFailed() {  
+
+    assertTrue(false);
+  }
+
 }
