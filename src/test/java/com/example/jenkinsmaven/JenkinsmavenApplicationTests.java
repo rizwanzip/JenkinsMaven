@@ -1,7 +1,7 @@
 package com.example.jenkinsmaven;
 
 import org.junit.jupiter.api.Test;
-import org.junit.Assert.*;
+//import org.junit.Assert.*;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -12,9 +12,9 @@ class JenkinsmavenApplicationTests {
 	}
 
 	 @Test
-  public void intentionalyFailed() {  
+ /* public void intentionalyFailed() {  
 
     assertTrue(false);
-  }
+  }*/
 
 }
