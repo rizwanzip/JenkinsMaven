@@ -1,0 +1,53 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                script {
+                	
+			bat 'gradlew.bat build test'    
+		}
+            }
+            post {
+                success {
+                    echo 'Sending test success email..'
+                    script{
+				    emailext(
+				    	from: 'Jenkins.notifications@centegytechnologies.com',
+			            	body: 'hello fawad',
+			            	//body: '${SCRIPT, template="groovy-html.template"}',
+			            	mimeType: 'text/html',
+			            	subject: '${DEFAULT_SUBJECT}',
+			            	to: 'fawad.ali@centegytechnologies.com'
+			    		)
+                    }
+                    echo 'Email sent..'
+                }
+                failure {
+                    echo 'Sending test failure email..'
+                    script{
+				    emailext(
+				    	from: 'Jenkins.notifications@centegytechnologies.com',
+			            	body: 'hello fawad',
+			            	mimeType: 'text/html',
+			            	subject: '${DEFAULT_SUBJECT}',
+			            	to: 'fawad.ali@centegytechnologies.com'
+			    		)
+                    }
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+	}
+}
