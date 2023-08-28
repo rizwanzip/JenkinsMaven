@@ -15,6 +15,7 @@ pipeline {
         stage('Code Build') {
             steps {
                  echo "Code Build...."
+				 utility.info('test-Call')
                // bat  'gradlew clean build test'
             }            
         }
