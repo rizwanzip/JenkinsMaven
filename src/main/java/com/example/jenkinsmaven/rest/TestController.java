@@ -8,7 +8,7 @@ public class TestController {
 
     @GetMapping("/")
     public String SayHello(){
-        return "Hello Maven";
+        return "Hello Maven modified";
     }
 
 }
