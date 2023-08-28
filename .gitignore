@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/test/DocSettings/Jenkinsfile0
+/src/test/DocSettings/Jenkinsfile1
+/src/test/DocSettings/Jenkinsfile2
+/src/test/DocSettings/Jenkinsfile3
+/src/test/DocSettings/Jenkinsfile4
+/src/test/DocSettings/Project-Settings-doc.docx
+/src/test/DocSettings/Jenkinsfile
