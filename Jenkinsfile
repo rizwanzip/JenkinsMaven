@@ -20,7 +20,7 @@ pipeline {
             steps {
                  echo "Code Build...."
 				 utility '*****Centegy'
-				 utility.info 'test utility'
+				 utility.info('test utility')
 				// utility.info('test-Call')
                // bat  'gradlew clean build test'
             }            
