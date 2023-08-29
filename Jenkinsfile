@@ -19,7 +19,8 @@ pipeline {
         stage('Code Build') {
             steps {
                  echo "Code Build...."
-				 utility 'Dave'
+				 utility '*****Centegy'
+				 utility.info 'test utility'
 				// utility.info('test-Call')
                // bat  'gradlew clean build test'
             }            
