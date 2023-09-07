@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JenkinsMavenApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(JenkinsMavenApplication.class, args);
     }
 
