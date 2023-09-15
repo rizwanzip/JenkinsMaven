@@ -14,6 +14,8 @@ pipeline {
                  echo "Code Build....123"
 				 script{
 				 common.info("Select Modules from groovy") 
+				 env.SND_MODS = input message: 'Please enter the modules to build ', ok: 'Proceed!',
+                        parameters: [text(name: 'SND_MODS', defaultValue: "${SnDModules}", description: 'Modules to build?')]
 				 }
                // bat  'gradlew clean build test'
             }            
