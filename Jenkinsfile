@@ -1,3 +1,5 @@
+@Library('jenkinslib@master') _
+
 pipeline {
     agent any   
     stages {
@@ -10,6 +12,9 @@ pipeline {
         stage('Code Build') {
             steps {
                  echo "Code Build....123"
+				 script{
+				 common.info("Select Modules from groovy") 
+				 }
                // bat  'gradlew clean build test'
             }            
         }
