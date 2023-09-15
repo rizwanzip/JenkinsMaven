@@ -9,7 +9,7 @@ pipeline {
         //}
         stage('Code Build') {
             steps {
-                 echo "Code Build...."
+                 echo "Code Build....123"
                // bat  'gradlew clean build test'
             }            
         }
